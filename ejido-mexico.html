@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha Comercial | Ejido México</title>
+  <meta name="google" content="notranslate">
+  
+  <meta property="og:title" content="Inmueble Comercial en Venta | Ejido México">
+  <meta property="og:description" content="$2,300,000 MXN (Contado). 2 Locales comerciales equipados y gran patio sobre Calle Sinaloa. Haz clic para ver detalles.">
+  <meta property="og:image" content="https://palosverdesinmobiliaria.github.io/PROPIEDADES/frente.jpg">
+  <meta property="og:image:secure_url" content="https://palosverdesinmobiliaria.github.io/PROPIEDADES/frente.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://palosverdesinmobiliaria.github.io/PROPIEDADES/ejido-mexico.html">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F382A;
+      --primary-light: #18523E;
+      --accent: #D4AF37;
+      --whatsapp: #25D366;
+      --tiktok: #000000;
+      --bg: #F1F5F9;
+      --card-bg: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --border: #E2E8F0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 15px 10px;
+    }
+
+    .app-container {
+      width: 100%;
+      max-width: 440px;
+      background: var(--card-bg);
+      border-radius: 28px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      color: var(--primary);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .badge-status {
+      background: #FEF3C7;
+      color: #92400E;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-media {
+      position: relative;
+      height: 260px;
+      background: #0F172A;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px;
+      color: #FFF;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .zoom-icon {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 4;
+      background: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-img-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      transition: opacity 0.25s ease-in-out;
+    }
+
+    .hero-gradient {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(15,23,42,0.85) 100%);
+      z-index: 2;
+    }
+
+    .hero-tag {
+      position: relative;
+      z-index: 3;
+      align-self: flex-start;
+      background: var(--primary);
+      color: #FFF;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-overlay-text {
+      position: relative;
+      z-index: 3;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+
+    .hero-overlay-text .zone {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #E2E8F0;
+    }
+
+    .hero-overlay-text .title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      margin-top: 2px;
+    }
+
+    .gallery-strip {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 12px 16px;
+      background: #F8FAFC;
+      border-bottom: 1px solid var(--border);
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .gallery-thumb {
+      width: 65px;
+      height: 55px;
+      flex: 0 0 65px;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+      background: #E2E8F0;
+    }
+
+    .gallery-thumb.active {
+      border-color: var(--primary);
+      transform: scale(0.95);
+    }
+
+    .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content-body { padding: 20px; }
+
+    .price-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+
+    .price-val {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .price-type {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      background: #F8FAFC;
+      padding: 12px 8px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .spec-item .value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      display: block;
+    }
+
+    .spec-item .label {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 2px;
+      display: block;
+    }
+
+    .btn-action-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .btn-custom-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      background: #FFFFFF;
+      color: #0F172A;
+      border: 1.5px solid #CBD5E1;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-custom-action:hover { background: #F8FAFC; border-color: #94A3B8; }
+    .btn-tiktok { border-color: #000; color: #000; }
+
+    /* Puntos de Interés */
+    .poi-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .poi-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #F8FAFC;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .poi-icon { font-size: 16px; }
+
+    .section-header {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .tab-pills { display: flex; gap: 6px; margin-bottom: 14px; }
+
+    .tab-btn {
+      flex: 1;
+      padding: 8px 4px;
+      background: #F1F5F9;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #FFF;
+      border-color: var(--primary);
+    }
+
+    .tab-content {
+      display: none;
+      background: #F8FAFC;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 14px;
+      margin-bottom: 22px;
+    }
+
+    .tab-content.active { display: block; }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .feature-list li {
+      font-size: 13px;
+      color: #334155;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+
+    .feature-list li::before {
+      content: "✔";
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .investment-box {
+      background: #FFFFFF;
+      border: 2px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 24px;
+    }
+
+    .investment-header {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .investment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .inv-card {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .inv-card span { font-size: 10px; color: var(--muted); display: block; text-transform: uppercase; }
+    .inv-card strong { font-size: 12px; color: var(--primary); display: block; margin-top: 2px; }
+
+    /* Desplegable de Requisitos */
+    .req-accordion {
+      background: #FFFFFF;
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .req-summary {
+      padding: 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+    .req-summary::-webkit-details-marker { display: none; }
+    .req-icon {
+      font-size: 18px;
+      font-weight: 400;
+      transition: transform 0.3s ease;
+    }
+    details[open] .req-icon {
+      transform: rotate(45deg);
+    }
+    .req-content {
+      padding: 0 16px 16px 16px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text);
+    }
+    .req-content ul {
+      margin-top: 10px;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+    .req-content ul li {
+      margin-bottom: 6px;
+    }
+
+    .agent-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 16px;
+    }
+
+    .agent-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .agent-details h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    .agent-details p {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .btn-whatsapp-cta {
+      background: var(--whatsapp);
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      padding: 16px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+      transition: transform 0.2s ease;
+    }
+
+    .btn-whatsapp-cta:hover { transform: translateY(-2px); }
+
+    .image-modal {
+      display: none; 
+      position: fixed; 
+      z-index: 9999; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      background-color: rgba(0, 0, 0, 0.95); 
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-content {
+      max-width: 95%;
+      max-height: 90%;
+      border-radius: 8px;
+      object-fit: contain;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      color: #f1f1f1;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10000;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="fs-modal" class="image-modal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="fs-img">
+  </div>
+
+  <div class="app-container">
+    <div class="header-bar">
+      <div class="brand-title">Palos Verdes Inmobiliaria</div>
+      <div class="badge-status">Pago de Contado</div>
+    </div>
+
+    <div class="hero-media" onclick="openModal()">
+      <div class="zoom-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+      </div>
+      <img id="main-hero-img" class="hero-img-bg" src="frente.jpg" alt="Fachada Comercial">
+      <div class="hero-gradient"></div>
+      <div class="hero-tag">Comercial • Ejido México</div>
+      <div class="hero-overlay-text">
+        <div class="zone">CALLE SINALOA (CERCA BLVR. INDEPENDENCIA)</div>
+        <h1 class="title">Locales + Gran Patio Comercial</h1>
+      </div>
+    </div>
+
+    <!-- Galería con tus archivos exactos -->
+    <div class="gallery-strip">
+      <div class="gallery-thumb active" onclick="setPhoto(0, this)"><img src="frente.jpg" alt="Frente"></div>
+      <div class="gallery-thumb" onclick="setPhoto(1, this)"><img src="abarrotefrente.jpg" alt="Local Abarrote"></div>
+      <div class="gallery-thumb" onclick="setPhoto(2, this)"><img src="abarrote.jpg" alt="Interior Abarrote"></div>
+      <div class="gallery-thumb" onclick="setPhoto(3, this)"><img src="abarrote1.jpg" alt="Detalle Abarrote"></div>
+      <div class="gallery-thumb" onclick="setPhoto(4, this)"><img src="fresasfrente.jpg" alt="Local Snacks"></div>
+      <div class="gallery-thumb" onclick="setPhoto(5, this)"><img src="fresas1.jpg" alt="Cuarto Snacks"></div>
+      <div class="gallery-thumb" onclick="setPhoto(6, this)"><img src="fresas2.jpg" alt="Espacio Snacks"></div>
+      <div class="gallery-thumb" onclick="setPhoto(7, this)"><img src="fresas3.jpg" alt="Detalle Snacks"></div>
+      <div class="gallery-thumb" onclick="setPhoto(8, this)"><img src="bano.jpg" alt="Baño"></div>
+      <div class="gallery-thumb" onclick="setPhoto(9, this)"><img src="patio.jpg" alt="Patio Comercial"></div>
+    </div>
+
+    <div class="content-body">
+      <div class="price-container">
+        <div class="price-val">$2,300,000 MXN</div>
+        <div class="price-type">Recursos Propios (Contado)</div>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-item">
+          <span class="value">297 m²</span>
+          <span class="label">Terreno (11.4m frente)</span>
+        </div>
+        <div class="spec-item">
+          <span class="value">135 m²</span>
+          <span class="label">Construcción</span>
+        </div>
+        <div class="spec-item">
+          <span class="value">2 Locales</span>
+          <span class="label">+ Patio Amplio</span>
+        </div>
+      </div>
+
+      <div class="btn-action-row">
+        <a href="https://maps.app.goo.gl/tNw5Qbg75xeQG7sCA" target="_blank" class="btn-custom-action">
+          📍 Ver Mapa
+        </a>
+        <a href="https://vt.tiktok.com/ZSbb9jqrh/" target="_blank" class="btn-custom-action btn-tiktok">
+          🎬 Ver TikTok
+        </a>
+      </div>
+
+      <!-- Puntos de Interés -->
+      <div class="section-header">Ubicación y Entorno Comercial</div>
+      <div class="poi-grid">
+        <div class="poi-item"><span class="poi-icon">🛣️</span> Sobre Calle Sinaloa, a metros del Blvr. Independencia</div>
+        <div class="poi-item"><span class="poi-icon">🏫</span> Frente a Kínder y entorno escolar con gran flujo</div>
+        <div class="poi-item"><span class="poi-icon">🛒</span> Cerca de farmacias, cenadurías y comercios locales</div>
+        <div class="poi-item"><span class="poi-icon">🚌</span> Acceso inmediato a rutas de transporte público</div>
+      </div>
+
+      <div class="section-header">Distribución e Infraestructura</div>
+      <div class="tab-pills">
+        <button class="tab-btn active" onclick="switchTab('local1', this)">Local Abarrote</button>
+        <button class="tab-btn" onclick="switchTab('local2', this)">Local Snacks</button>
+        <button class="tab-btn" onclick="switchTab('patio', this)">Gran Patio</button>
+      </div>
+
+      <div id="tab-local1" class="tab-content active">
+        <ul class="feature-list">
+          <li><strong>Local 1 (Abarrote):</strong> Listo para operar de inmediato.</li>
+          <li>Cuenta con <strong>medio baño propio</strong>.</li>
+          <li>Zona de bodega chica para almacenamiento de mercancía.</li>
+          <li>Excelente visibilidad comercial sobre la Calle Sinaloa.</li>
+        </ul>
+      </div>
+
+      <div id="tab-local2" class="tab-content">
+        <ul class="feature-list">
+          <li><strong>Local 2 (Snacks / Comida):</strong> Espacio versátil equipado.</li>
+          <li>Distribución con <strong>2 cuartos independientes</strong>.</li>
+          <li><strong>Baño completo</strong> integrado.</li>
+          <li>Bodega auxiliar para insumos y equipo.</li>
+        </ul>
+      </div>
+
+      <div id="tab-patio" class="tab-content">
+        <ul class="feature-list">
+          <li><strong>Gran Patio Comercial:</strong> Amplio terreno posterior.</li>
+          <li>Piso firme de <strong>concreto</strong> en toda su superficie.</li>
+          <li>Ideal para maniobras de carga, estacionamiento privado o futuras ampliaciones.</li>
+          <li>Instalación activa de <strong>cámaras de seguridad</strong> y todos los servicios (Luz, Agua, Drenaje, Internet).</li>
+        </ul>
+      </div>
+
+      <div class="section-header">Resumen Comercial</div>
+      <div class="investment-box">
+        <div class="investment-header">🏢 Potencial del Inmueble</div>
+        <div class="investment-grid">
+          <div class="inv-card">
+            <span>Frente Comercial</span>
+            <strong>11.40 Metros</strong>
+          </div>
+          <div class="inv-card">
+            <span>Esquema de Venta</span>
+            <strong>Contado / Efectivo</strong>
+          </div>
+        </div>
+        <p style="font-size: 11px; color: var(--muted); line-height: 1.4;">
+          Excelente oportunidad para inversionistas: genera ingresos por renta simultánea de 2 locales comerciales más espacio operativo o habitacional.
+        </p>
+      </div>
+
+      <!-- Desplegable de Requisitos -->
+      <details class="req-accordion">
+        <summary class="req-summary">
+          📄 Requisitos para Adquisición (Contado)
+          <span class="req-icon">+</span>
+        </summary>
+        <div class="req-content">
+          <p>Para la compraventa bajo recursos propios, se requiere:</p>
+          <ul>
+            <li><strong>Identificación Oficial:</strong> INE o Pasaporte vigente del comprador.</li>
+            <li><strong>Constancia de Situación Fiscal (CSF):</strong> Actualizada con RFC.</li>
+            <li><strong>Comprobante de Domicilio:</strong> Reciente (no mayor a 3 meses).</li>
+            <li>Inmueble con documentación en regla ante notario público.</li>
+          </ul>
+        </div>
+      </details>
+
+      <div class="agent-box">
+        <div class="agent-avatar">CC</div>
+        <div class="agent-details">
+          <h4>Carlos Ramón Calderón</h4>
+          <p>Asesor Inmobiliario | Palos Verdes</p>
+        </div>
+      </div>
+
+      <a id="whatsapp-btn" href="#" target="_blank" class="btn-whatsapp-cta">
+        💬 Me interesa este inmueble comercial
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const propertyPhotos = [
+      "frente.jpg",
+      "abarrotefrente.jpg",
+      "abarrote.jpg",
+      "abarrote1.jpg",
+      "fresasfrente.jpg",
+      "fresas1.jpg",
+      "fresas2.jpg",
+      "fresas3.jpg",
+      "bano.jpg",
+      "patio.jpg"
+    ];
+
+    function setPhoto(index, el) {
+      document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('main-hero-img').src = propertyPhotos[index];
+    }
+
+    function openModal() {
+      const modal = document.getElementById("fs-modal");
+      const modalImg = document.getElementById("fs-img");
+      const mainImg = document.getElementById("main-hero-img");
+      
+      modal.style.display = "flex";
+      modalImg.src = mainImg.src;
+    }
+
+    function closeModal() {
+      document.getElementById("fs-modal").style.display = "none";
+    }
+
+    function switchTab(tabKey, element) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      element.classList.add('active');
+      document.getElementById('tab-' + tabKey).classList.add('active');
+    }
+
+    // Enlace de WhatsApp personalizado para este inmueble comercial
+    const msg = `Hola Carlos, me interesa el inmueble comercial en Col. Ejido México ($2,300,000 MXN, pago de contado). Vi la ficha técnica y el video. ¿Cuándo podemos agendar una visita?`;
+    document.getElementById('whatsapp-btn').href = `https://wa.me/526681631420?text=${encodeURIComponent(msg)}`;
+  </script>
+</body>
+</html>
