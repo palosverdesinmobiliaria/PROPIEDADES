@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha Terreno | Emiliano Zapata (El Fuerte)</title>
+  <meta name="google" content="notranslate">
+  
+  <meta property="og:title" content="Terreno de 408 m² en Venta | El Fuerte, Sinaloa">
+  <meta property="og:description" content="$950,000 MXN. A 1 cuadra del bulevar principal. 17x24m, aceptamos Infonavit y Contado. Haz clic para ver detalles.">
+  <meta property="og:image" content="https://palosverdesinmobiliaria.github.io/PROPIEDADES/terr-frente.jpg?v=1">
+  <meta property="og:image:secure_url" content="https://palosverdesinmobiliaria.github.io/PROPIEDADES/terr-frente.jpg?v=1">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://palosverdesinmobiliaria.github.io/PROPIEDADES/terreno-zapata.html">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F382A;
+      --primary-light: #18523E;
+      --accent: #D4AF37;
+      --whatsapp: #25D366;
+      --infonavit: #D92534;
+      --tiktok: #000000;
+      --bg: #F1F5F9;
+      --card-bg: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --border: #E2E8F0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 15px 10px;
+    }
+
+    .app-container {
+      width: 100%;
+      max-width: 440px;
+      background: var(--card-bg);
+      border-radius: 28px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      color: var(--primary);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .badge-status {
+      background: #DCFCE7;
+      color: #166534;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-media {
+      position: relative;
+      height: 260px;
+      background: #0F172A;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px;
+      color: #FFF;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .zoom-icon {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 4;
+      background: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-img-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      transition: opacity 0.25s ease-in-out;
+    }
+
+    .hero-gradient {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(15,23,42,0.85) 100%);
+      z-index: 2;
+    }
+
+    .hero-tag {
+      position: relative;
+      z-index: 3;
+      align-self: flex-start;
+      background: var(--primary);
+      color: #FFF;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-overlay-text {
+      position: relative;
+      z-index: 3;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+
+    .hero-overlay-text .zone {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #E2E8F0;
+    }
+
+    .hero-overlay-text .title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      margin-top: 2px;
+    }
+
+    .gallery-strip {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 12px 16px;
+      background: #F8FAFC;
+      border-bottom: 1px solid var(--border);
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .gallery-thumb {
+      width: 65px;
+      height: 55px;
+      flex: 0 0 65px;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+      background: #E2E8F0;
+    }
+
+    .gallery-thumb.active {
+      border-color: var(--primary);
+      transform: scale(0.95);
+    }
+
+    .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content-body { padding: 20px; }
+
+    .price-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+
+    .price-val {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .price-type {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      background: #F8FAFC;
+      padding: 12px 8px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .spec-item .value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      display: block;
+    }
+
+    .spec-item .label {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 2px;
+      display: block;
+    }
+
+    .btn-action-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .btn-custom-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      background: #FFFFFF;
+      color: #0F172A;
+      border: 1.5px solid #CBD5E1;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-custom-action:hover { background: #F8FAFC; border-color: #94A3B8; }
+    .btn-tiktok { border-color: #000; color: #000; }
+
+    /* Puntos de Interés */
+    .poi-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .poi-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #F8FAFC;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .poi-icon { font-size: 16px; }
+
+    .section-header {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .tab-pills { display: flex; gap: 6px; margin-bottom: 14px; }
+
+    .tab-btn {
+      flex: 1;
+      padding: 8px 4px;
+      background: #F1F5F9;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #FFF;
+      border-color: var(--primary);
+    }
+
+    .tab-content {
+      display: none;
+      background: #F8FAFC;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 14px;
+      margin-bottom: 22px;
+    }
+
+    .tab-content.active { display: block; }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .feature-list li {
+      font-size: 13px;
+      color: #334155;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+
+    .feature-list li::before {
+      content: "✔";
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .mortgage-calculator {
+      background: #FFFFFF;
+      border: 2px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 24px;
+    }
+
+    .calc-toggle {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      background: #F1F5F9;
+      padding: 4px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+    }
+
+    .calc-toggle-btn {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .calc-toggle-btn.active-cash {
+      background: var(--primary);
+      color: #FFFFFF;
+    }
+
+    .calc-toggle-btn.active-infonavit {
+      background: var(--infonavit);
+      color: #FFFFFF;
+    }
+
+    .calc-control { margin-bottom: 14px; }
+
+    .calc-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .calc-range {
+      width: 100%;
+      height: 6px;
+      background: #E2E8F0;
+      border-radius: 5px;
+      outline: none;
+      accent-color: var(--primary);
+      cursor: pointer;
+    }
+
+    .calc-range.infonavit-slider { accent-color: var(--infonavit); }
+
+    .term-selector {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .term-btn {
+      padding: 8px 0;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      background: #FFFFFF;
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .term-btn.active-infonavit {
+      border-color: var(--infonavit);
+      background: #FEF2F2;
+      color: var(--infonavit);
+      font-weight: 700;
+    }
+
+    .calc-display {
+      background: #F8FAFC;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .display-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .display-amount {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 4px 0 10px 0;
+    }
+
+    .display-amount.red { color: var(--infonavit); }
+
+    .calc-breakdown {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border);
+      text-align: left;
+    }
+
+    .breakdown-item span {
+      display: block;
+      font-size: 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .breakdown-item strong {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 2px;
+    }
+
+    /* Desplegable de Requisitos */
+    .req-accordion {
+      background: #FFFFFF;
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .req-summary {
+      padding: 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+    .req-summary::-webkit-details-marker { display: none; }
+    .req-icon {
+      font-size: 18px;
+      font-weight: 400;
+      transition: transform 0.3s ease;
+    }
+    details[open] .req-icon {
+      transform: rotate(45deg);
+    }
+    .req-content {
+      padding: 0 16px 16px 16px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text);
+    }
+    .req-content ul {
+      margin-top: 10px;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+    .req-content ul li {
+      margin-bottom: 6px;
+    }
+
+    .agent-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 16px;
+    }
+
+    .agent-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .agent-details h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    .agent-details p {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .btn-whatsapp-cta {
+      background: var(--whatsapp);
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      padding: 16px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+      transition: transform 0.2s ease;
+    }
+
+    .btn-whatsapp-cta:hover { transform: translateY(-2px); }
+
+    .image-modal {
+      display: none; 
+      position: fixed; 
+      z-index: 9999; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      background-color: rgba(0, 0, 0, 0.95); 
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-content {
+      max-width: 95%;
+      max-height: 90%;
+      border-radius: 8px;
+      object-fit: contain;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      color: #f1f1f1;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10000;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="fs-modal" class="image-modal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="fs-img">
+  </div>
+
+  <div class="app-container">
+    <div class="header-bar">
+      <div class="brand-title">Palos Verdes Inmobiliaria</div>
+      <div class="badge-status">Infonavit / Contado</div>
+    </div>
+
+    <div class="hero-media" onclick="openModal()">
+      <div class="zoom-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+      </div>
+      <img id="main-hero-img" class="hero-img-bg" src="terr-frente.jpg" alt="Terreno Frente">
+      <div class="hero-gradient"></div>
+      <div class="hero-tag">Terreno de 408 m² • Se Vende Como Terreno</div>
+      <div class="hero-overlay-text">
+        <div class="zone">CALLE EMILIANO ZAPATA (EL FUERTE)</div>
+        <h1 class="title">A 1 Cuadra del Bulevar Principal</h1>
+      </div>
+    </div>
+
+    <!-- Galería con tus archivos exactos -->
+    <div class="gallery-strip">
+      <div class="gallery-thumb active" onclick="setPhoto(0, this)"><img src="terr-frente.jpg" alt="Frente"></div>
+      <div class="gallery-thumb" onclick="setPhoto(1, this)"><img src="terr-area2.jpg" alt="Área Terreno"></div>
+      <div class="gallery-thumb" onclick="setPhoto(2, this)"><img src="terr-aerea.jpg" alt="Vista Aérea"></div>
+    </div>
+
+    <div class="content-body">
+      <div class="price-container">
+        <div class="price-val">$950,000 MXN</div>
+        <div class="price-type">Infonavit / Contado</div>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-item">
+          <span class="value">408 m²</span>
+          <span class="label">Terreno (17x24m)</span>
+        </div>
+        <div class="spec-item">
+          <span class="value">3 Cuartos</span>
+          <span class="label">2 Construcciones</span>
+        </div>
+        <div class="spec-item">
+          <span class="value">1 Baño</span>
+          <span class="label">Escrituras en Regla</span>
+        </div>
+      </div>
+
+      <div class="btn-action-row">
+        <a href="https://maps.app.goo.gl/qwuw2q57bMy6fDqd7" target="_blank" class="btn-custom-action">
+          📍 Ver Mapa
+        </a>
+        <a href="https://vt.tiktok.com/ZSbb3x5TT/" target="_blank" class="btn-custom-action btn-tiktok">
+          🎬 Ver TikTok
+        </a>
+      </div>
+
+      <!-- Puntos de Interés -->
+      <div class="section-header">Ubicación y Entorno</div>
+      <div class="poi-grid">
+        <div class="poi-item"><span class="poi-icon">🛣️</span> A solo 1 cuadra del bulevar principal El Fuerte - Mochis</div>
+        <div class="poi-item"><span class="poi-icon">📍</span> Ubicado sobre Calle Emiliano Zapata, zona céntrica</div>
+        <div class="poi-item"><span class="poi-icon">⚡</span> Servicios básicos listos para contratar</div>
+      </div>
+
+      <div class="section-header">Distribución del Inmueble</div>
+      <div class="tab-pills">
+        <button class="tab-btn active" onclick="switchTab('terreno', this)">Superficie (Terreno)</button>
+        <button class="tab-btn" onclick="switchTab('c1', this)">Construcción 1</button>
+        <button class="tab-btn" onclick="switchTab('c2', this)">Construcción 2</button>
+      </div>
+
+      <div id="tab-terreno" class="tab-content active">
+        <ul class="feature-list">
+          <li><strong>Gran Frente:</strong> 17 metros de frente por 24 metros de fondo (408 m² totales).</li>
+          <li><strong>Se vende como terreno:</strong> Ideal para demoler, remodelar o desarrollar un proyecto a tu medida.</li>
+          <li>Documentación en regla y escrituras públicas listas para notario.</li>
+        </ul>
+      </div>
+
+      <div id="tab-c1" class="tab-content">
+        <ul class="feature-list">
+          <li><strong>Construcción 1:</strong> Área independiente con 1 cuarto adaptable.</li>
+          <li>Estructura funcional para bodega o espacio provisional de obra.</li>
+        </ul>
+      </div>
+
+      <div id="tab-c2" class="tab-content">
+        <ul class="feature-list">
+          <li><strong>Construcción 2:</strong> Área con 2 cuartos y 1 baño completo.</li>
+          <li>Independiente de la primera construcción.</li>
+        </ul>
+      </div>
+
+      <div class="section-header">Simulador Financiero Oficial</div>
+      <div class="mortgage-calculator">
+        <div class="calc-toggle">
+          <button id="btn-mode-cash" class="calc-toggle-btn active-cash" onclick="setCreditMode('cash')">
+            💵 Contado (Propio)
+          </button>
+          <button id="btn-mode-infonavit" class="calc-toggle-btn" onclick="setCreditMode('infonavit')">
+            🏠 INFONAVIT (Crediterreno)
+          </button>
+        </div>
+
+        <div id="cash-controls">
+          <div class="calc-control">
+            <div class="calc-label-row">
+              <span>Propuesta de Pago:</span>
+              <strong id="cash-price-label">$950,000 MXN</strong>
+            </div>
+            <p style="font-size: 11px; color: var(--muted); margin-top: 4px;">Compraventa directa con recursos propios ante notario público.</p>
+          </div>
+        </div>
+
+        <div id="infonavit-controls" style="display: none;">
+          <div class="calc-control">
+            <div class="calc-label-row">
+              <span>Tu Salario Mensual Bruto:</span>
+              <strong id="info-salary-label">$25,000 MXN</strong>
+            </div>
+            <input type="range" min="10000" max="75000" step="2500" value="25000" class="calc-range infonavit-slider" id="info-salary-slider" oninput="calculateAll()">
+          </div>
+
+          <div class="calc-control">
+            <div class="calc-label-row">
+              <span>Saldo Subcuenta de Vivienda (SSV):</span>
+              <strong id="info-ssv-label">$100,000 MXN</strong>
+            </div>
+            <input type="range" min="20000" max="400000" step="10000" value="100000" class="calc-range infonavit-slider" id="info-ssv-slider" oninput="calculateAll()">
+          </div>
+
+          <div class="calc-control">
+            <div class="calc-label-row">
+              <span>Plazo Máximo Crediterreno:</span>
+              <strong id="info-term-label">15 años</strong>
+            </div>
+            <div class="term-selector">
+              <button class="term-btn active-infonavit" onclick="setInfoTerm(15, this)">15 años</button>
+              <button class="term-btn" onclick="setInfoTerm(20, this)">20 años</button>
+              <button class="term-btn" onclick="setInfoTerm(25, this)">25 años</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-display">
+          <div class="display-tag" id="result-title">Inversión Total de Contado</div>
+          <div class="display-amount" id="result-monthly">$950,000 MXN</div>
+
+          <div class="calc-breakdown">
+            <div class="breakdown-item">
+              <span id="label-sub1">Superficie Total</span>
+              <strong id="val-sub1">408 m²</strong>
+            </div>
+            <div class="breakdown-item">
+              <span id="label-sub2">Precio por m²</span>
+              <strong id="val-sub2">$2,328 / m²</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desplegable de Requisitos -->
+      <details class="req-accordion">
+        <summary class="req-summary">
+          📄 Requisitos para Trámite (Infonavit / Contado)
+          <span class="req-icon">+</span>
+        </summary>
+        <div class="req-content">
+          <p>Para adquirir este terreno con escrituras en regla:</p>
+          <ul>
+            <li><strong>Identificación Oficial:</strong> INE o Pasaporte vigente.</li>
+            <li><strong>Constancia de Situación Fiscal (CSF):</strong> Actualizada con RFC.</li>
+            <li><strong>Comprobante de Domicilio:</strong> Reciente (no mayor a 3 meses).</li>
+            <li><strong>Para Infonavit:</strong> Precalificación positiva en Mi Cuenta Infonavit (esquema Crediterreno).</li>
+          </ul>
+        </div>
+      </details>
+
+      <div class="agent-box">
+        <div class="agent-avatar">CC</div>
+        <div class="agent-details">
+          <h4>Carlos Ramón Calderón</h4>
+          <p>Asesor Inmobiliario | Palos Verdes</p>
+        </div>
+      </div>
+
+      <a id="whatsapp-btn" href="#" target="_blank" class="btn-whatsapp-cta">
+        💬 Me interesa este terreno en El Fuerte
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const PROPERTY_PRICE = 950000;
+    let currentMode = 'cash';
+    let selectedInfoYears = 15;
+
+    const propertyPhotos = [
+      "terr-frente.jpg",
+      "terr-area2.jpg",
+      "terr-aerea.jpg"
+    ];
+
+    function setPhoto(index, el) {
+      document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('main-hero-img').src = propertyPhotos[index];
+    }
+
+    function openModal() {
+      const modal = document.getElementById("fs-modal");
+      const modalImg = document.getElementById("fs-img");
+      const mainImg = document.getElementById("main-hero-img");
+      
+      modal.style.display = "flex";
+      modalImg.src = mainImg.src;
+    }
+
+    function closeModal() {
+      document.getElementById("fs-modal").style.display = "none";
+    }
+
+    function switchTab(tabKey, element) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      element.classList.add('active');
+      document.getElementById('tab-' + tabKey).classList.add('active');
+    }
+
+    function setCreditMode(mode) {
+      currentMode = mode;
+      const btnCash = document.getElementById('btn-mode-cash');
+      const btnInfo = document.getElementById('btn-mode-infonavit');
+      const cashControls = document.getElementById('cash-controls');
+      const infoControls = document.getElementById('infonavit-controls');
+      const resultMonthly = document.getElementById('result-monthly');
+
+      if (mode === 'cash') {
+        btnCash.className = 'calc-toggle-btn active-cash';
+        btnInfo.className = 'calc-toggle-btn';
+        cashControls.style.display = 'block';
+        infoControls.style.display = 'none';
+        resultMonthly.classList.remove('red');
+      } else {
+        btnCash.className = 'calc-toggle-btn';
+        btnInfo.className = 'calc-toggle-btn active-infonavit';
+        cashControls.style.display = 'none';
+        infoControls.style.display = 'block';
+        resultMonthly.classList.add('red');
+      }
+      calculateAll();
+    }
+
+    function setInfoTerm(years, btn) {
+      selectedInfoYears = years;
+      document.querySelectorAll('#infonavit-controls .term-btn').forEach(b => b.classList.remove('active-infonavit'));
+      btn.classList.add('active-infonavit');
+      document.getElementById('info-term-label').innerText = years + ' años';
+      calculateAll();
+    }
+
+    function calculatePMT(principal, annualRatePct, years) {
+      const monthlyRate = (annualRatePct / 100) / 12;
+      const totalPayments = years * 12;
+      return (principal * (monthlyRate * Math.pow(1 + monthlyRate, totalPayments))) / (Math.pow(1 + monthlyRate, totalPayments) - 1);
+    }
+
+    function calculateAll() {
+      let monthlyText = "";
+      let creditTypeDesc = "";
+
+      if (currentMode === 'cash') {
+        document.getElementById('result-title').innerText = 'Inversión Total de Contado';
+        document.getElementById('result-monthly').innerText = '$950,000 MXN';
+        document.getElementById('label-sub1').innerText = 'Superficie Total';
+        document.getElementById('val-sub1').innerText = '408 m²';
+        document.getElementById('label-sub2').innerText = 'Precio por m²';
+        document.getElementById('val-sub2').innerText = '$2,328 / m²';
+
+        monthlyText = `$950,000 MXN de contado`;
+        creditTypeDesc = "Contado / Recursos Propios";
+      } else {
+        const salary = parseInt(document.getElementById('info-salary-slider').value);
+        const ssv = parseInt(document.getElementById('info-ssv-slider').value);
+
+        document.getElementById('info-salary-label').innerText = '$' + salary.toLocaleString('es-MX') + ' MXN';
+        document.getElementById('info-ssv-label').innerText = '$' + ssv.toLocaleString('es-MX') + ' MXN';
+
+        let infoRate = 8.50; // Tasa promedio Crediterreno
+        if (salary <= 12000) infoRate = 6.50;
+        else if (salary <= 25000) infoRate = 7.80;
+        else infoRate = 8.50;
+
+        const maxMonthlyPayment = salary * 0.30;
+        const loanNeeded = Math.max(0, PROPERTY_PRICE - ssv);
+        const pmtInfonavit = calculatePMT(loanNeeded, infoRate, selectedInfoYears);
+        const totalMonthly = Math.round(Math.min(pmtInfonavit, maxMonthlyPayment));
+
+        document.getElementById('result-title').innerText = `Mensualidad Estimada (Infonavit Terreno - ${infoRate}%)`;
+        document.getElementById('result-monthly').innerText = '$' + totalMonthly.toLocaleString('es-MX') + ' MXN / mes';
+        document.getElementById('label-sub1').innerText = 'Saldo SSV Utilizado';
+        document.getElementById('val-sub1').innerText = '$' + ssv.toLocaleString('es-MX');
+        document.getElementById('label-sub2').innerText = 'Financiamiento Terreno';
+        document.getElementById('val-sub2').innerText = '$' + loanNeeded.toLocaleString('es-MX');
+
+        monthlyText = `$${totalMonthly.toLocaleString('es-MX')} MXN/mes vía Infonavit (${selectedInfoYears} años, esquema Crediterreno)`;
+        creditTypeDesc = "Crédito Infonavit (Crediterreno)";
+      }
+
+      const msg = `Hola Carlos, me interesa el terreno de 408 m² en Calle Emiliano Zapata, El Fuerte ($950,000 MXN). Hice mi simulación por ${creditTypeDesc} (${monthlyText}). ¿Cuándo podemos agendar una visita?`;
+      const encodedMsg = encodeURIComponent(msg);
+      document.getElementById('whatsapp-btn').href = `https://wa.me/526681631420?text=${encodedMsg}`;
+    }
+
+    calculateAll();
+  </script>
+</body>
+</html>
