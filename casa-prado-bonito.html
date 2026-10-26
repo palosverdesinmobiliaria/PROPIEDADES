@@ -3,16 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ficha Técnica | Casa Prado Bonito</title>
+  <title>Casa en venta en Prado Bonito, Los Mochis | 3 recámaras, cochera para 2 | $1.7M</title>
   <meta name="google" content="notranslate">
   
-  <meta property="og:title" content="Casa en Venta | Prado Bonito">
-  <meta property="og:description" content="Residencial 2 Plantas • $1,700,000 MXN. Haz clic para ver la galería completa, detalles y simulador de crédito.">
-  <meta property="og:image" content="https://palosverdesinmobiliaria.github.io/PROPIEDADES/fachada.jpg?v=4">
-  <meta property="og:image:secure_url" content="https://palosverdesinmobiliaria.github.io/PROPIEDADES/fachada.jpg?v=4">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:title" content="Casa en Venta en Prado Bonito, Los Mochis | $1,700,000 MXN">
+  <meta property="og:description" content="3 recámaras, 1.5 baños, cochera para 2 autos y patio amplio. Aceptamos Infonavit, bancario y contado.">
+  <meta property="og:image" content="https://palosverdesinmobiliaria.github.io/PROPIEDADES/lazaro-fachada.jpg?v=2">
   <meta property="og:url" content="https://palosverdesinmobiliaria.github.io/PROPIEDADES/casa-prado-bonito.html">
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -192,6 +188,24 @@
 
     .content-body { padding: 20px; }
 
+    /* Recuadro Resumen Superior */
+    .summary-box {
+      background: #F8FAFC;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 16px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--text);
+    }
+    .summary-box div {
+      margin-bottom: 4px;
+    }
+    .summary-box div:last-child {
+      margin-bottom: 0;
+    }
+
     .price-container {
       display: flex;
       justify-content: space-between;
@@ -201,7 +215,7 @@
 
     .price-val {
       font-family: 'Montserrat', sans-serif;
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 800;
       color: var(--primary);
     }
@@ -216,25 +230,25 @@
     .specs-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
+      gap: 6px;
       background: #F8FAFC;
-      padding: 12px 8px;
+      padding: 12px 6px;
       border-radius: 14px;
       border: 1px solid var(--border);
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .spec-item .value {
       font-family: 'Montserrat', sans-serif;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--primary);
       display: block;
     }
 
     .spec-item .label {
-      font-size: 10px;
+      font-size: 9px;
       color: var(--muted);
       margin-top: 2px;
       display: block;
@@ -253,32 +267,11 @@
       background: #FFFFFF;
       color: #0F172A;
       border: 1.5px solid #CBD5E1;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       transition: all 0.2s ease;
     }
 
     .btn-maps-action:hover { background: #F8FAFC; border-color: #94A3B8; }
-
-    /* Puntos de Interés */
-    .poi-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-    .poi-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: #F8FAFC;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      font-size: 12px;
-      color: var(--text);
-      font-weight: 500;
-    }
-    .poi-icon { font-size: 16px; }
 
     .section-header {
       font-family: 'Montserrat', sans-serif;
@@ -347,6 +340,7 @@
       margin-top: 2px;
     }
 
+    /* Simulador de referencia */
     .mortgage-calculator {
       background: #FFFFFF;
       border: 2px solid var(--border);
@@ -411,41 +405,7 @@
       accent-color: var(--primary);
       cursor: pointer;
     }
-
     .calc-range.infonavit-slider { accent-color: var(--infonavit); }
-
-    .term-selector {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-    }
-
-    .term-btn {
-      padding: 8px 0;
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      background: #FFFFFF;
-      color: var(--text);
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      text-align: center;
-      transition: all 0.2s;
-    }
-
-    .term-btn.active {
-      border-color: var(--primary);
-      background: #F0FDF4;
-      color: var(--primary);
-      font-weight: 700;
-    }
-
-    .term-btn.active-infonavit {
-      border-color: var(--infonavit);
-      background: #FEF2F2;
-      color: var(--infonavit);
-      font-weight: 700;
-    }
 
     .calc-display {
       background: #F8FAFC;
@@ -465,40 +425,23 @@
 
     .display-amount {
       font-family: 'Montserrat', sans-serif;
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 800;
       color: var(--primary);
       margin: 4px 0 10px 0;
     }
-
     .display-amount.red { color: var(--infonavit); }
 
-    .calc-breakdown {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      padding-top: 10px;
-      border-top: 1px dashed var(--border);
-      text-align: left;
-    }
-
-    .breakdown-item span {
-      display: block;
-      font-size: 10px;
+    .calc-disclaimer {
+      font-size: 11px;
       color: var(--muted);
-      text-transform: uppercase;
+      margin-top: 10px;
+      text-align: center;
+      line-height: 1.4;
     }
 
-    .breakdown-item strong {
-      display: block;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--text);
-      margin-top: 2px;
-    }
-
-    /* Desplegable de Requisitos */
-    .req-accordion {
+    /* Preguntas Frecuentes y Acordeón */
+    .faq-accordion {
       background: #FFFFFF;
       border: 2px solid var(--border);
       border-radius: 14px;
@@ -506,7 +449,7 @@
       overflow: hidden;
       transition: all 0.3s ease;
     }
-    .req-summary {
+    .faq-summary {
       padding: 16px;
       font-family: 'Montserrat', sans-serif;
       font-size: 13px;
@@ -518,28 +461,20 @@
       align-items: center;
       list-style: none;
     }
-    .req-summary::-webkit-details-marker { display: none; }
-    .req-icon {
-      font-size: 18px;
-      font-weight: 400;
-      transition: transform 0.3s ease;
-    }
-    details[open] .req-icon {
-      transform: rotate(45deg);
-    }
-    .req-content {
+    .faq-summary::-webkit-details-marker { display: none; }
+    .faq-icon { font-size: 18px; transition: transform 0.3s ease; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-content {
       padding: 0 16px 16px 16px;
       font-size: 12px;
       line-height: 1.5;
       color: var(--text);
     }
-    .req-content ul {
-      margin-top: 10px;
-      padding-left: 20px;
-      color: var(--muted);
+    .faq-content p {
+      margin-bottom: 10px;
     }
-    .req-content ul li {
-      margin-bottom: 6px;
+    .faq-content strong {
+      color: var(--primary);
     }
 
     .agent-box {
@@ -598,44 +533,39 @@
 
     .btn-whatsapp-cta:hover { transform: translateY(-2px); }
 
+    .update-tag {
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 16px;
+    }
+
     .image-modal {
       display: none; 
       position: fixed; 
       z-index: 9999; 
-      left: 0;
-      top: 0;
-      width: 100%; 
-      height: 100%; 
+      left: 0; top: 0;
+      width: 100%; height: 100%; 
       background-color: rgba(0, 0, 0, 0.95); 
-      align-items: center;
-      justify-content: center;
+      align-items: center; justify-content: center;
       backdrop-filter: blur(5px);
     }
 
     .modal-content {
-      max-width: 95%;
-      max-height: 90%;
-      border-radius: 8px;
-      object-fit: contain;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      max-width: 95%; max-height: 90%;
+      border-radius: 8px; object-fit: contain;
     }
 
     .close-modal {
-      position: absolute;
-      top: 20px;
-      right: 25px;
-      color: #f1f1f1;
-      font-size: 35px;
-      font-weight: bold;
-      cursor: pointer;
-      z-index: 10000;
+      position: absolute; top: 20px; right: 25px;
+      color: #f1f1f1; font-size: 35px; font-weight: bold; cursor: pointer; z-index: 10000;
     }
   </style>
 </head>
 <body>
 
   <div id="fs-modal" class="image-modal" onclick="closeModal()">
-    <span class="close-modal">&times;</span>
+    <span class="close-modal">×</span>
     <img class="modal-content" id="fs-img">
   </div>
 
@@ -649,100 +579,88 @@
       <div class="zoom-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
       </div>
-      <img id="main-hero-img" class="hero-img-bg" src="fachada.jpg" alt="Fachada">
+      <img id="main-hero-img" class="hero-img-bg" src="lazaro-fachada.jpg" alt="Fachada Casa Prado Bonito">
       <div class="hero-gradient"></div>
-      <div class="hero-tag">En Venta • 2 Plantas</div>
+      <div class="hero-tag">Residencial • 2 Plantas</div>
       <div class="hero-overlay-text">
-        <div class="zone">FRACC. LÁZARO CÁRDENAS / PRADO BONITO</div>
-        <h1 class="title">Residencial 2 Plantas</h1>
+        <div class="zone">FRACC. LÁZARO CÁRDENAS (PRADO BONITO)</div>
+        <h1 class="title">Casa en Venta Los Mochis</h1>
       </div>
     </div>
 
+    <!-- Galería -->
     <div class="gallery-strip">
-      <div class="gallery-thumb active" onclick="setPhoto(0, this)"><img src="fachada.jpg" alt="Fachada"></div>
-      <div class="gallery-thumb" onclick="setPhoto(1, this)"><img src="sala.JPG" alt="Sala"></div>
-      <div class="gallery-thumb" onclick="setPhoto(2, this)"><img src="comedor.JPG" alt="Comedor"></div>
-      <div class="gallery-thumb" onclick="setPhoto(3, this)"><img src="cocina.JPG" alt="Cocina"></div>
-      <div class="gallery-thumb" onclick="setPhoto(4, this)"><img src="recamara.JPG" alt="Recámara Principal"></div>
-      <div class="gallery-thumb" onclick="setPhoto(5, this)"><img src="recamara1.jpg" alt="Recámara 2"></div>
-      <div class="gallery-thumb" onclick="setPhoto(6, this)"><img src="recamara2.JPG" alt="Recámara 3"></div>
-      <div class="gallery-thumb" onclick="setPhoto(7, this)"><img src="bano.jpg" alt="Baño"></div>
-      <div class="gallery-thumb" onclick="setPhoto(8, this)"><img src="mediobaño.JPG" alt="Medio Baño"></div>
-      <div class="gallery-thumb" onclick="setPhoto(9, this)"><img src="pasilloservicio.jpg" alt="Pasillo de Servicio"></div>
+      <div class="gallery-thumb active" onclick="setPhoto(0, this)"><img src="lazaro-fachada.jpg" alt="Fachada"></div>
+      <div class="gallery-thumb" onclick="setPhoto(1, this)"><img src="lazaro-sala.jpg" alt="Sala"></div>
+      <div class="gallery-thumb" onclick="setPhoto(2, this)"><img src="lazaro-comedor.jpg" alt="Comedor"></div>
+      <div class="gallery-thumb" onclick="setPhoto(3, this)"><img src="lazaro-cocina.jpg" alt="Cocina"></div>
+      <div class="gallery-thumb" onclick="setPhoto(4, this)"><img src="lazaro-recamara1.jpg" alt="Recámara 1"></div>
+      <div class="gallery-thumb" onclick="setPhoto(5, this)"><img src="lazaro-recamara1closet.jpg" alt="Closet"></div>
+      <div class="gallery-thumb" onclick="setPhoto(6, this)"><img src="lazaro-recamara2.jpg" alt="Recámara 2"></div>
+      <div class="gallery-thumb" onclick="setPhoto(7, this)"><img src="lazaro-recamara3.jpg" alt="Recámara 3"></div>
+      <div class="gallery-thumb" onclick="setPhoto(8, this)"><img src="lazaro-bano.jpg" alt="Baño"></div>
+      <div class="gallery-thumb" onclick="setPhoto(9, this)"><img src="lazaro-pasilloservicio.jpg" alt="Pasillo"></div>
     </div>
 
     <div class="content-body">
+      
+      <!-- Resumen en un recuadro -->
+      <div class="summary-box">
+        <div>🏠 <strong>$1,700,000 MXN</strong> · 3 recámaras · 1.5 baños · cochera para 2 autos</div>
+        <div>📐 136 m² terreno (8x17m) · 90 m² construcción</div>
+        <div>💳 Infonavit, bancario o contado</div>
+        <div>📍 Fracc. Lázaro Cárdenas (Prado Bonito), Los Mochis</div>
+      </div>
+
       <div class="price-container">
         <div class="price-val">$1,700,000 MXN</div>
         <div class="price-type">Infonavit / Bancario / Contado</div>
       </div>
 
       <div class="specs-grid">
-        <div class="spec-item">
-          <span class="value">136 m²</span>
-          <span class="label">Terreno (8x17)</span>
-        </div>
-        <div class="spec-item">
-          <span class="value">90 m²</span>
-          <span class="label">Construcción</span>
-        </div>
-        <div class="spec-item">
-          <span class="value">3</span>
-          <span class="label">Recámaras</span>
-        </div>
-        <div class="spec-item">
-          <span class="value">1.5</span>
-          <span class="label">Baños</span>
-        </div>
+        <div class="spec-item"><span class="value">136 m²</span><span class="label">Terreno</span></div>
+        <div class="spec-item"><span class="value">90 m²</span><span class="label">Construcción</span></div>
+        <div class="spec-item"><span class="value">3 Rec.</span><span class="label">Planta Alta</span></div>
+        <div class="spec-item"><span class="value">2 Autos</span><span class="label">Cochera</span></div>
       </div>
 
-      <!-- UBICACIÓN EXACTA CON TU LINK DE GOOGLE MAPS -->
-      <a href="https://maps.app.goo.gl/pcREzXGavgYZZcwWA" target="_blank" class="btn-maps-action">
-        📍 Abrir Ubicación Exacta en Google Maps
+      <!-- Ubicación aproximada por seguridad -->
+      <a href="https://maps.app.goo.gl/sKzgAbMfH53WeYZP8" target="_blank" class="btn-maps-action">
+        📍 Ver Zona Aproximada en Google Maps (Dirección exacta al agendar visita)
       </a>
 
-      <!-- Puntos de Interés con Parques -->
-      <div class="section-header">Puntos de Interés Cercanos</div>
-      <div class="poi-grid">
-        <div class="poi-item"><span class="poi-icon">🛣️</span> A 2 min de Blvd. Centenario y Blvd. Macario Gaxiola</div>
-        <div class="poi-item"><span class="poi-icon">🛒</span> A 4 min de Bodega Aurrera Centenario y Oxxo</div>
-        <div class="poi-item"><span class="poi-icon">🏫</span> A 6 min de Ciudad Universitaria (UAS) y escuelas cercanas</div>
-        <div class="poi-item"><span class="poi-icon">🌳</span> Cercanía a parques y áreas verdes recreativas del fraccionamiento</div>
-      </div>
-
-      <div class="section-header">Distribución del Inmueble</div>
+      <div class="section-header">Distribución y Espacios</div>
       <div class="tab-pills">
-        <button class="tab-btn active" onclick="switchTab('exterior', this)">Exterior</button>
-        <button class="tab-btn" onclick="switchTab('baja', this)">Planta Baja</button>
-        <button class="tab-btn" onclick="switchTab('alta', this)">Planta Alta</button>
+        <button class="tab-btn active" onclick="switchTab('pb', this)">Planta Baja</button>
+        <button class="tab-btn" onclick="switchTab('pa', this)">Planta Alta</button>
+        <button class="tab-btn" onclick="switchTab('ext', this)">Exterior / Patio</button>
       </div>
 
-      <div id="tab-exterior" class="tab-content active">
+      <div id="tab-pb" class="tab-content active">
         <ul class="feature-list">
-          <li><strong>Cochera privada</strong> para 2 vehículos al frente.</li>
-          <li><strong>Pasillo de servicio independiente</strong> (acceso directo sin entrar a la casa).</li>
-          <li><strong>Patio posterior amplio</strong> con gran metraje para área social, asador o futura ampliación.</li>
+          <li><strong>Sala y Comedor:</strong> Espacios amplios con excelente iluminación natural.</li>
+          <li><strong>Cocina:</strong> Equipada con isla central funcional.</li>
+          <li><strong>Medio Baño:</strong> Práctico para visitas en planta baja.</li>
         </ul>
       </div>
 
-      <div id="tab-baja" class="tab-content">
+      <div id="tab-pa" class="tab-content">
         <ul class="feature-list">
-          <li><strong>Sala y comedor</strong> corridos con excelente entrada de luz natural.</li>
-          <li><strong>Cocina integral equipada con isla funcional</strong> (desayunador y preparación).</li>
-          <li><strong>Medio baño</strong> de visitas en planta baja.</li>
-          <li>Salida directa al patio trasero.</li>
+          <li><strong>3 Recámaras:</strong> Ubicadas en planta alta, cómodas y bien ventiladas.</li>
+          <li><strong>Baño Completo:</strong> Da servicio a las habitaciones de la planta alta.</li>
         </ul>
       </div>
 
-      <div id="tab-alta" class="tab-content">
+      <div id="tab-ext" class="tab-content">
         <ul class="feature-list">
-          <li><strong>3 recámaras</strong> bien distribuidas con área destinada para clóset.</li>
-          <li><strong>1 baño completo</strong> con acabados modernos.</li>
-          <li>Distribuidor iluminado hacia las habitaciones.</li>
+          <li><strong>Patio Posterior Súper Amplio:</strong> Ideal para reuniones, jardín o futuras ampliaciones.</li>
+          <li><strong>Cochera privada:</strong> Espacio para 2 automóviles.</li>
+          <li><strong>Pasillo de servicio:</strong> Conexión lateral independiente.</li>
         </ul>
       </div>
 
-      <div class="section-header">Simulador Financiero Oficial</div>
+      <!-- Simulador de referencia -->
+      <div class="section-header">Simulador de Referencia</div>
       <div class="mortgage-calculator">
         <div class="calc-toggle">
           <button id="btn-mode-bank" class="calc-toggle-btn active-bank" onclick="setCreditMode('bank')">
@@ -756,29 +674,24 @@
         <div id="bank-controls">
           <div class="calc-control">
             <div class="calc-label-row">
-              <span>Enganche aportado:</span>
-              <strong id="bank-down-label">$170,000 (10%)</strong>
+              <span>Enganche (Escenario):</span>
+              <strong id="bank-down-label">20% ($340,000)</strong>
             </div>
-            <input type="range" min="10" max="50" step="5" value="10" class="calc-range" id="bank-down-slider" oninput="calculateAll()">
-          </div>
-
-          <div class="calc-control">
-            <div class="calc-label-row">
-              <span>Tasa Anual del Banco:</span>
-              <strong id="bank-rate-label">10.25% anual</strong>
+            <div class="term-selector" style="grid-template-columns: repeat(3, 1fr); gap: 6px;">
+              <button class="term-btn" onclick="setDownScenario(10, this)">10%</button>
+              <button class="term-btn active" onclick="setDownScenario(20, this)">20%</button>
+              <button class="term-btn" onclick="setDownScenario(30, this)">30%</button>
             </div>
-            <input type="range" min="8.5" max="13.5" step="0.25" value="10.25" class="calc-range" id="bank-rate-slider" oninput="calculateAll()">
           </div>
-
-          <div class="calc-control">
+          <div class="calc-control" style="margin-top: 10px;">
             <div class="calc-label-row">
-              <span>Plazo del financiamiento:</span>
+              <span>Plazo:</span>
               <strong id="bank-term-label">20 años</strong>
             </div>
-            <div class="term-selector">
-              <button class="term-btn" onclick="setTerm(10, this)">10 años</button>
-              <button class="term-btn" onclick="setTerm(15, this)">15 años</button>
-              <button class="term-btn active" onclick="setTerm(20, this)">20 años</button>
+            <div class="term-selector" style="grid-template-columns: repeat(3, 1fr); gap: 6px;">
+              <button class="term-btn" onclick="setBankTerm(10, this)">10 años</button>
+              <button class="term-btn" onclick="setBankTerm(15, this)">15 años</button>
+              <button class="term-btn active" onclick="setBankTerm(20, this)">20 años</button>
             </div>
           </div>
         </div>
@@ -786,99 +699,89 @@
         <div id="infonavit-controls" style="display: none;">
           <div class="calc-control">
             <div class="calc-label-row">
-              <span>Tu Salario Mensual Bruto:</span>
+              <span>Salario Mensual Aprox:</span>
               <strong id="info-salary-label">$25,000 MXN</strong>
             </div>
-            <input type="range" min="10000" max="75000" step="2500" value="25000" class="calc-range infonavit-slider" id="info-salary-slider" oninput="calculateAll()">
-          </div>
-
-          <div class="calc-control">
-            <div class="calc-label-row">
-              <span>Saldo Subcuenta de Vivienda (SSV):</span>
-              <strong id="info-ssv-label">$120,000 MXN</strong>
-            </div>
-            <input type="range" min="20000" max="500000" step="10000" value="120000" class="calc-range infonavit-slider" id="info-ssv-slider" oninput="calculateAll()">
-          </div>
-
-          <div class="calc-control">
-            <div class="calc-label-row">
-              <span>Plazo Infonavit:</span>
-              <strong id="info-term-label">30 años</strong>
-            </div>
-            <div class="term-selector">
-              <button class="term-btn" onclick="setInfoTerm(15, this)">15 años</button>
-              <button class="term-btn" onclick="setInfoTerm(20, this)">20 años</button>
-              <button class="term-btn active-infonavit" onclick="setInfoTerm(30, this)">30 años</button>
-            </div>
+            <input type="range" min="12000" max="60000" step="2000" value="25000" class="calc-range infonavit-slider" id="info-salary-slider" oninput="calculateAll()">
           </div>
         </div>
 
         <div class="calc-display">
-          <div class="display-tag" id="result-title">Mensualidad Total Estimada</div>
-          <div class="display-amount" id="result-monthly">$15,480 MXN</div>
-
+          <div class="display-tag" id="result-title">Mensualidad Estimada</div>
+          <div class="display-amount" id="result-monthly">$13,500 MXN</div>
           <div class="calc-breakdown">
             <div class="breakdown-item">
-              <span id="label-sub1">Monto de Crédito</span>
-              <strong id="val-sub1">$1,530,000</strong>
+              <span id="label-sub1">Monto a Financiar</span>
+              <strong id="val-sub1">$1,360,000</strong>
             </div>
             <div class="breakdown-item">
               <span id="label-sub2">Ingreso Mínimo Sugerido</span>
-              <strong id="val-sub2">$38,700 / mes</strong>
+              <strong id="val-sub2">$33,750 / mes</strong>
             </div>
           </div>
         </div>
+        <div class="calc-disclaimer">
+          Estimación informativa. La tasa, el monto y la aprobación dependen de cada banco o de Infonavit (criterio de capacidad de pago calculado al 40% del ingreso).
+        </div>
       </div>
 
-      <!-- Desplegable de Requisitos -->
-      <details class="req-accordion">
-        <summary class="req-summary">
-          📄 Ver Requisitos para Trámite
-          <span class="req-icon">+</span>
+      <!-- Preguntas Frecuentes -->
+      <div class="section-header">Preguntas Frecuentes</div>
+      <details class="faq-accordion">
+        <summary class="faq-summary">
+          ❓ Resolvemos tus dudas principales
+          <span class="faq-icon">+</span>
         </summary>
-        <div class="req-content">
-          <p>Para apartar la propiedad e iniciar la gestión de tu crédito, necesitarás la siguiente documentación básica:</p>
-          <ul>
-            <li><strong>Identificación Oficial:</strong> INE o Pasaporte vigente.</li>
-            <li><strong>Acta de Nacimiento:</strong> Formato original o digital reciente.</li>
-            <li><strong>Número de Seguridad Social (NSS):</strong> Formato descargado del portal.</li>
-            <li><strong>Situación Fiscal:</strong> Constancia (CSF) actualizada con RFC.</li>
-            <li><strong>Comprobante de domicilio:</strong> No mayor a 3 meses.</li>
-          </ul>
+        <div class="faq-content">
+          <p><strong>¿Aceptan Infonavit y bancario? ¿Cuánto tarda el trámite?</strong><br>Sí, aceptamos créditos Infonavit, bancarios (BBVA, Banorte, Santander) y recursos propios. El trámite toma de 4 a 6 semanas dependiendo de la institución.</p>
+          <p><strong>¿Puedo apartar? ¿Con cuánto y qué pasa si no se aprueba mi crédito?</strong><br>Sí puedes apartar con un monto mínimo acordado. Si tu crédito no se aprueba por causas ajenas, se te devuelve tu apartado conforme a contrato.</p>
+          <p><strong>¿Se puede ampliar?</strong><br>¡Claro que sí! Gracias a su <strong>patio posterior súper amplio</strong>, tienes espacio de sobra para futuras construcciones, terraza o área social.</p>
+          <p><strong>¿Cuándo se entrega y en qué estado?</strong><br>La casa se entrega con documentación en regla, lista para habitarse tras la firma de escrituras ante notario.</p>
         </div>
       </details>
+
+      <!-- Días y Horarios de Visitas -->
+      <div class="section-header">Agendar Visita</div>
+      <div class="summary-box" style="text-align: center; margin-bottom: 20px;">
+        📅 <strong>Horarios de Visitas:</strong> Jueves y Sábados (Previa cita).<br>
+        Escribe <em>“Quiero visita a Prado Bonito”</em> en el botón de abajo y te confirmo espacio.
+      </div>
 
       <div class="agent-box">
         <div class="agent-avatar">CC</div>
         <div class="agent-details">
           <h4>Carlos Ramón Calderón</h4>
-          <p>Asesor Inmobiliario | Palos Verdes</p>
+          <p>Asesor Inmobiliario | Palos Verdes Inmobiliaria</p>
         </div>
       </div>
 
       <a id="whatsapp-btn" href="#" target="_blank" class="btn-whatsapp-cta">
-        💬 Quiero ver la propiedad, me interesa
+        💬 Me interesa la casa en Prado Bonito
       </a>
+
+      <div class="update-tag">
+        Ficha actualizada: Octubre 2026
+      </div>
     </div>
   </div>
 
   <script>
     const PROPERTY_PRICE = 1700000;
     let currentMode = 'bank';
+    let selectedDownPct = 20;
     let selectedBankYears = 20;
-    let selectedInfoYears = 30;
 
     const propertyPhotos = [
-      "fachada.jpg",
-      "sala.JPG",
-      "comedor.JPG",
-      "cocina.JPG",
-      "recamara.JPG",
-      "recamara1.jpg",
-      "recamara2.JPG",
-      "bano.jpg",
-      "mediobaño.JPG",
-      "pasilloservicio.jpg"
+      "lazaro-fachada.jpg",
+      "lazaro-sala.jpg",
+      "lazaro-comedor.jpg",
+      "lazaro-cocina.jpg",
+      "lazaro-recamara1.jpg",
+      "lazaro-recamara1closet.jpg",
+      "lazaro-recamara2.jpg",
+      "lazaro-recamara3.jpg",
+      "lazaro-bano.jpg",
+      "lazaro-pasilloservicio.jpg"
     ];
 
     function setPhoto(index, el) {
@@ -891,7 +794,6 @@
       const modal = document.getElementById("fs-modal");
       const modalImg = document.getElementById("fs-img");
       const mainImg = document.getElementById("main-hero-img");
-      
       modal.style.display = "flex";
       modalImg.src = mainImg.src;
     }
@@ -913,37 +815,37 @@
       const btnInfo = document.getElementById('btn-mode-infonavit');
       const bankControls = document.getElementById('bank-controls');
       const infoControls = document.getElementById('infonavit-controls');
-      const resultMonthly = document.getElementById('result-monthly');
 
       if (mode === 'bank') {
         btnBank.className = 'calc-toggle-btn active-bank';
         btnInfo.className = 'calc-toggle-btn';
         bankControls.style.display = 'block';
         infoControls.style.display = 'none';
-        resultMonthly.classList.remove('red');
       } else {
         btnBank.className = 'calc-toggle-btn';
         btnInfo.className = 'calc-toggle-btn active-infonavit';
         bankControls.style.display = 'none';
         infoControls.style.display = 'block';
-        resultMonthly.classList.add('red');
       }
       calculateAll();
     }
 
-    function setTerm(years, btn) {
-      selectedBankYears = years;
-      document.querySelectorAll('#bank-controls .term-btn').forEach(b => b.classList.remove('active'));
+    function setDownScenario(pct, btn) {
+      selectedDownPct = pct;
+      document.querySelectorAll('#bank-controls .term-btn').forEach((b, i) => {
+        if(i < 3) b.classList.remove('active');
+      });
       btn.classList.add('active');
-      document.getElementById('bank-term-label').innerText = years + ' años';
       calculateAll();
     }
 
-    function setInfoTerm(years, btn) {
-      selectedInfoYears = years;
-      document.querySelectorAll('#infonavit-controls .term-btn').forEach(b => b.classList.remove('active-infonavit'));
-      btn.classList.add('active-infonavit');
-      document.getElementById('info-term-label').innerText = years + ' años';
+    function setBankTerm(years, btn) {
+      selectedBankYears = years;
+      document.querySelectorAll('#bank-controls .term-btn').forEach((b, i) => {
+        if(i >= 3) b.classList.remove('active');
+      });
+      btn.classList.add('active');
+      document.getElementById('bank-term-label').innerText = years + ' años';
       calculateAll();
     }
 
@@ -958,60 +860,46 @@
       let creditTypeDesc = "";
 
       if (currentMode === 'bank') {
-        const downPct = parseInt(document.getElementById('bank-down-slider').value);
-        const annualRate = parseFloat(document.getElementById('bank-rate-slider').value);
-        const downpayment = PROPERTY_PRICE * (downPct / 100);
+        const downpayment = PROPERTY_PRICE * (selectedDownPct / 100);
         const loanAmount = PROPERTY_PRICE - downpayment;
+        document.getElementById('bank-down-label').innerText = selectedDownPct + '% ($' + downpayment.toLocaleString('es-MX') + ')';
 
-        document.getElementById('bank-down-label').innerText = '$' + downpayment.toLocaleString('es-MX') + ' (' + downPct + '%)';
-        document.getElementById('bank-rate-label').innerText = annualRate.toFixed(2) + '% anual';
-
+        const annualRate = 10.25;
         const pmtBase = calculatePMT(loanAmount, annualRate, selectedBankYears);
         const insurances = loanAmount * 0.0008;
         const totalMonthly = Math.round(pmtBase + insurances);
-        const requiredIncome = Math.round(totalMonthly / 0.38);
+        const requiredIncome = Math.round(totalMonthly / 0.40); // Criterio 40%
 
-        document.getElementById('result-title').innerText = 'Mensualidad Bancaria (con seguros)';
+        document.getElementById('result-title').innerText = 'Mensualidad Estimada (Bancario)';
         document.getElementById('result-monthly').innerText = '$' + totalMonthly.toLocaleString('es-MX') + ' MXN';
         document.getElementById('label-sub1').innerText = 'Monto a Financiar';
         document.getElementById('val-sub1').innerText = '$' + loanAmount.toLocaleString('es-MX');
-        document.getElementById('label-sub2').innerText = 'Ingreso Mínimo Sugerido';
+        document.getElementById('label-sub2').innerText = 'Ingreso Mínimo (40%)';
         document.getElementById('val-sub2').innerText = '$' + requiredIncome.toLocaleString('es-MX') + ' / mes';
 
-        monthlyText = `$${totalMonthly.toLocaleString('es-MX')} MXN/mes (${selectedBankYears} años, enganche ${downPct}%)`;
+        monthlyText = `$${totalMonthly.toLocaleString('es-MX')} MXN/mes (Bancario, enganche ${selectedDownPct}%)`;
         creditTypeDesc = "Crédito Bancario";
       } else {
         const salary = parseInt(document.getElementById('info-salary-slider').value);
-        const ssv = parseInt(document.getElementById('info-ssv-slider').value);
-
         document.getElementById('info-salary-label').innerText = '$' + salary.toLocaleString('es-MX') + ' MXN';
-        document.getElementById('info-ssv-label').innerText = '$' + ssv.toLocaleString('es-MX') + ' MXN';
 
-        let infoRate = 10.45;
-        if (salary <= 12000) infoRate = 3.90;
-        else if (salary <= 18000) infoRate = 6.50;
-        else if (salary <= 25000) infoRate = 8.85;
-        else if (salary <= 35000) infoRate = 9.80;
+        const maxMonthlyPayment = salary * 0.35;
+        const totalMonthly = Math.round(Math.min(maxMonthlyPayment, PROPERTY_PRICE / 200));
+        const requiredIncome = salary;
 
-        const maxMonthlyPayment = salary * 0.30;
-        const loanNeeded = Math.max(0, PROPERTY_PRICE - ssv);
-        const pmtInfonavit = calculatePMT(loanNeeded, infoRate, selectedInfoYears);
-        const totalMonthly = Math.round(Math.min(pmtInfonavit, maxMonthlyPayment));
+        document.getElementById('result-title').innerText = 'Estimación Infonavit';
+        document.getElementById('result-monthly').innerText = '$' + totalMonthly.toLocaleString('es-MX') + ' MXN / mes';
+        document.getElementById('label-sub1').innerText = 'Valor de la Propiedad';
+        document.getElementById('val-sub1').innerText = '$1,700,000';
+        document.getElementById('label-sub2').innerText = 'Capacidad Calculada';
+        document.getElementById('val-sub2').innerText = '35% del sueldo';
 
-        document.getElementById('result-title').innerText = `Descuento Vía Nómina (Tasa Infonavit: ${infoRate}%)`;
-        document.getElementById('result-monthly').innerText = '$' + totalMonthly.toLocaleString('es-MX') + ' MXN';
-        document.getElementById('label-sub1').innerText = 'Saldo SSV Utilizado';
-        document.getElementById('val-sub1').innerText = '$' + ssv.toLocaleString('es-MX');
-        document.getElementById('label-sub2').innerText = 'Financiamiento Infonavit';
-        document.getElementById('val-sub2').innerText = '$' + loanNeeded.toLocaleString('es-MX');
-
-        monthlyText = `$${totalMonthly.toLocaleString('es-MX')} MXN/mes vía nómina (${selectedInfoYears} años, salario $${salary.toLocaleString('es-MX')})`;
-        creditTypeDesc = "Infonavit";
+        monthlyText = `Infonavit (Sueldo ref: $${salary.toLocaleString('es-MX')})`;
+        creditTypeDesc = "Crédito Infonavit";
       }
 
-      const msg = `Hola Carlos, me interesa la casa en Prado Bonito ($1,700,000). Hice mi simulación por ${creditTypeDesc} y obtuvo un estimado de ${monthlyText}. ¿Cuándo podemos agendar una visita?`;
-      const encodedMsg = encodeURIComponent(msg);
-      document.getElementById('whatsapp-btn').href = `https://wa.me/526681631420?text=${encodedMsg}`;
+      const msg = `Hola Carlos, me interesa la casa en Prado Bonito ($1,700,000). Hice mi simulación por ${creditTypeDesc} (${monthlyText}). ¿Cuándo podemos agendar una visita?`;
+      document.getElementById('whatsapp-btn').href = `https://wa.me/526681631420?text=${encodeURIComponent(msg)}`;
     }
 
     calculateAll();
