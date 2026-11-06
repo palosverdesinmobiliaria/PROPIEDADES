@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residencia en Exclusiva | Las Fuentes</title>
+    <!-- Tailwind CSS para diseño móvil profesional -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased pb-24">
+
+    <!-- Encabezado / Portada -->
+    <header class="relative bg-slate-900 text-white shadow-lg">
+        <div class="absolute inset-0 opacity-40 mix-blend-overlay">
+            <img src="fuentes-area.jpg" alt="Vista Aérea Las Fuentes" class="w-full h-full object-cover">
+        </div>
+        <div class="relative max-w-md mx-auto px-4 py-8 text-center">
+            <span class="inline-block bg-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-3">Disponible en Exclusiva</span>
+            <h1 class="text-2xl font-bold tracking-tight">Residencia Las Fuentes</h1>
+            <p class="text-slate-300 text-sm mt-1"><i class="fa-solid fa-location-dot text-emerald-400 mr-1"></i> Fraccionamiento Las Fuentes, Los Mochis</p>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="max-w-md mx-auto px-4 mt-6 space-y-6">
+
+        <!-- Ficha técnica rápida -->
+        <div class="grid grid-cols-3 gap-3 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 text-center">
+            <div>
+                <i class="fa-solid fa-bed text-emerald-600 text-lg mb-1"></i>
+                <p class="text-xs text-slate-500">Recámaras</p>
+                <p class="font-bold text-slate-800">6 Totales</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-bath text-emerald-600 text-lg mb-1"></i>
+                <p class="text-xs text-slate-500">Baños</p>
+                <p class="font-bold text-slate-800">6 Completos</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-car text-emerald-600 text-lg mb-1"></i>
+                <p class="text-xs text-slate-500">Cochera</p>
+                <p class="font-bold text-slate-800">2 Autos</p>
+            </div>
+        </div>
+
+        <!-- Distribución Arquitectónica -->
+        <section class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 space-y-4">
+            <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-house-chimney text-emerald-600"></i> Distribución
+            </h2>
+            
+            <div class="space-y-3 text-sm">
+                <div class="border-l-4 border-emerald-500 pl-3 py-1">
+                    <p class="font-semibold text-slate-900">Primer Piso (Planta Baja)</p>
+                    <p class="text-slate-600 text-xs mt-0.5">Cochera techada (2 carros), sala, comedor, cocina integral con barra de granito, y 2 recámaras (1 con baño completo privado y 1 adicional sin baño interior).</p>
+                </div>
+
+                <div class="border-l-4 border-emerald-500 pl-3 py-1">
+                    <p class="font-semibold text-slate-900">Segundo Piso (Planta Alta)</p>
+                    <p class="text-slate-600 text-xs mt-0.5">4 recámaras con baño completo y clóset cada una, cuarto de servicio, zona de TV, y balcón con vista panorámica al Cerro de la Memoria. Todo en madera de cedro.</p>
+                </div>
+
+                <div class="border-l-4 border-emerald-500 pl-3 py-1">
+                    <p class="font-semibold text-slate-900">Patio & Área Social</p>
+                    <p class="text-slate-600 text-xs mt-0.5">Asador equipado, zona techada de convivencia, área de lavado y 1 baño completo exterior.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipamiento y Amenidades -->
+        <section class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 space-y-3">
+            <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-star text-emerald-600"></i> Equipamiento Incluido
+            </h2>
+            <ul class="grid grid-cols-2 gap-2 text-xs text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Aires acondicionados</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Cocina con granito</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Abanicos de techo</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Protecciones de herrería</li>
+                <li class="flex items-center gap-2 col-span-2"><i class="fa-solid fa-check text-emerald-500"></i> Carpintería fina 100% en cedro</li>
+            </ul>
+        </section>
+
+        <!-- Galería Destacada (Imágenes reales de tu carpeta) -->
+        <section class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 space-y-3">
+            <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-images text-emerald-600"></i> Galería Fotográfica
+            </h2>
+            <p class="text-xs text-slate-500">Algunas áreas de la residencia. Puedes subir todas tus imágenes a la misma carpeta del repositorio con sus nombres exactos (ej. <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-700">fuentes-cocina.jpg</code>, <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-700">fuentes-recamara3.jpg</code>, etc.) y se mostrarán automáticamente.</p>
+            
+            <div class="grid grid-cols-2 gap-2 pt-2">
+                <div class="relative rounded-xl overflow-hidden shadow-sm aspect-video bg-slate-100">
+                    <img src="fuentes-cocina.jpg" alt="Cocina" class="w-full h-full object-cover">
+                    <span class="absolute bottom-1 left-1 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded">Cocina</span>
+                </div>
+                <div class="relative rounded-xl overflow-hidden shadow-sm aspect-video bg-slate-100">
+                    <img src="fuentes-sala.jpg" alt="Sala" class="w-full h-full object-cover">
+                    <span class="absolute bottom-1 left-1 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded">Sala</span>
+                </div>
+                <div class="relative rounded-xl overflow-hidden shadow-sm aspect-video bg-slate-100">
+                    <img src="fuentes-patio.jpg" alt="Patio" class="w-full h-full object-cover">
+                    <span class="absolute bottom-1 left-1 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded">Patio & Asador</span>
+                </div>
+                <div class="relative rounded-xl overflow-hidden shadow-sm aspect-video bg-slate-100">
+                    <img src="fuentes-balcon.jpg" alt="Balcón" class="w-full h-full object-cover">
+                    <span class="absolute bottom-1 left-1 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded">Vista al Cerro</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hub de Enlaces -->
+        <div class="space-y-3">
+            <a href="https://maps.app.goo.gl/NbShEhFuk6ZyTKdo9" target="_blank" class="flex items-center justify-center gap-2 w-full bg-white border border-slate-200 text-slate-700 font-semibold py-3 px-4 rounded-xl shadow-sm hover:bg-slate-50 transition text-sm">
+                <i class="fa-solid fa-map-location-dot text-emerald-600"></i> Ver Ubicación GPS
+            </a>
+            <a href="https://drive.google.com/drive/folders/1h4TMuhQjnAnfoGsNdXuFJy58BHsNDprX" target="_blank" class="flex items-center justify-center gap-2 w-full bg-slate-100 border border-slate-200 text-slate-700 font-semibold py-3 px-4 rounded-xl shadow-sm hover:bg-slate-200 transition text-sm">
+                <i class="fa-solid fa-folder-open text-emerald-600"></i> Ver Álbum Completo en Drive
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Barra fija inferior de Contacto WhatsApp -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-slate-200 p-3 shadow-lg z-50">
+        <div class="max-w-md mx-auto flex items-center justify-between gap-3">
+            <div>
+                <p class="text-xs text-slate-500 font-medium">Palos Verdes Inmobiliaria</p>
+                <p class="text-sm font-bold text-slate-900">Carlos R. Calderón</p>
+            </div>
+            <a href="https://wa.me/526681631420?text=Hola,%20me%20interesa%20recibir%20más%20información%20de%20la%20residencia%20en%20Las%20Fuentes." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm py-2.5 px-5 rounded-xl shadow-md transition flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Contactar
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
